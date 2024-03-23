@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junte-se à Rebelião - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<video autoplay muted loop id="background-video">
+    <source src="vid2.mp4" type="video/mp4">
+</video>
+
+<div id="message-box">
+    <h1><b> Junte-se à Rebelião </b></h1>
+    <form id="registration-form">
+        <div class="form-group">
+            <label for="user-type">Vendedor/Comprador:</label>
+            <select id="user-type" name="user_type">
+                <option value="vendedor">Vendedor</option>
+                <option value="comprador">Comprador</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="war-name">Seu Nome de Guerra:</label>
+            <input type="text" id="war-name" name="war_name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Seu Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Sua Senha:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <div class="links">
+        <a href="index.html">Página Inicial</a>
+        <a href="comprador.html">Página do Comprador</a>
+        <a href="vendedor.html">Página do Vendedor</a>
+        <a href="exemplo_venda.html">Página de Exemplo de Vendas</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

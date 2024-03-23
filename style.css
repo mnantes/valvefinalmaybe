@@ -1,0 +1,117 @@
+/* Estilos básicos para todo o site */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Vídeo de fundo comum para todas as páginas */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Garante que o vídeo fique atrás do conteúdo */
+}
+
+/* Efeito de blur para vídeo, se necessário */
+.video-blur {
+    filter: blur(8px);
+}
+
+/* Caixa de mensagem comum para todas as páginas */
+#message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 15px;
+    display: none; /* Oculto por padrão, mostrado via JS */
+    max-width: 80%;
+    z-index: 2; /* Assegura que a caixa de mensagem fique acima do vídeo */
+}
+
+/* Estilos para links dentro da caixa de mensagem */
+#message-box .links a {
+    display: inline-block;
+    margin: 10px;
+    background: #17a2b8;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#message-box .links a:hover {
+    background-color: #138496;
+}
+
+/* Grid de produtos para a página de exemplo de compra e venda */
+#product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20vh; /* Ajuste conforme necessário */
+}
+
+.product {
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    width: calc(33.333% - 20px); /* Três itens por linha menos o gap */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Garante que os produtos fiquem acima do vídeo */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Botão de comprar */
+.product button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px); /* Dois itens por linha em tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* Um item por linha em celulares */
+    }
+}
